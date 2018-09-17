@@ -23,9 +23,9 @@ injector.register([service, router], ['service', 'router']);
 And finally just use it:
 ```javascript
 var doSomething1 = injector.resolve('service', 'router', function(s, r, other) {
-  console.log(s.name);  // Service
-  console.log(r.name);  // Router
-  console.log(other);   // Other
+  console.log(s.name);      // Service
+  console.log(r.name);      // Router
+  console.log(other);       // Other
 
   s.name = 'New Service';
   r.name = 'New Router';
