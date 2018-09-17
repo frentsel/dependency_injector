@@ -1,9 +1,11 @@
 # DependencyInjector
-Dependency Injector is a library based on javascript
+Dependency Injector is a library based on javascript.
 
-## Example of using
+This implementation provides you an opportunity to use a common scope as well as a common instance of imported dependencies.
 
-### At first define two objects:
+### Example of using
+
+At first define two objects:
 ```javascript
 var service = {
   name: 'Service'
@@ -13,12 +15,12 @@ var router = {
   name: 'Router'
 }
 ```
-### Then register these objects:
+Then register these objects:
 ```javascript
 injector.register([service, router], ['service', 'router']);
 ```
 
-### And finally just use it:
+And finally just use it:
 ```javascript
 var doSomething1 = injector.resolve('service', 'router', function(s, r, other) {
   console.log(s.name);  // Service
@@ -34,7 +36,7 @@ var doSomething1 = injector.resolve('service', 'router', function(s, r, other) {
 doSomething1('Other');
 ```
 
-### And the second example to show the result of using a common scope:
+And the second example to show the result of using a common scope:
 ```javascript
 var doSomething2 = injector.resolve('router', 'service', function(s, r, other) {
   console.log(s.name);      // New Service
@@ -46,4 +48,4 @@ var doSomething2 = injector.resolve('router', 'service', function(s, r, other) {
 doSomething2('New Other');
 ```
 
-### That's it. Feel free to use it ;)
+That's it. Feel free to use it ;)
