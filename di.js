@@ -1,6 +1,6 @@
 const injector = (function() {
   const dependencies = {};
-  const register = function(deps, keys) {
+  const register = (deps, keys) => {
     keys.forEach((key, n) => {
       if (!dependencies[key]) {
         dependencies[key] = deps[n];

@@ -1,4 +1,4 @@
-# DependencyInjector
+# Dependency Injector
 Dependency Injector is a library based on javascript.
 
 This implementation provides you an opportunity to use a common scope as well as a common instance of imported dependencies.
